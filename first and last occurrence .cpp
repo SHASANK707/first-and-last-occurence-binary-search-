@@ -9,19 +9,19 @@ int mid=s+(e-s)/2;
 int ans=-1;
 while(s<=e)
 {
-    if(arr[mid]==key) //array of mid gives the value 
+    if(arr[mid]==key) //array of mid gives the value  that is stored in a array 
     {
-        ans=mid;
-        e=mid-1;
+        ans=mid;   //it will store the value of mid in ans for temporary
+        e=mid-1;    //if we just return ans it can not find the  first occ. so to find the leftmost occ. this step is done
     }
     else if(key<arr[mid])
     {
-        e=mid-1;
+        e=mid-1;   //left side bhagega
         
     }
     else if(key>arr[mid])
     {
-        s=mid+1;
+        s=mid+1;  //right side bhagega
     }
     
 
